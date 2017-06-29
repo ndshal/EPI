@@ -30,5 +30,4 @@ def dutch_flag_partition(pivot_index, A):
             A[i], A[larger] = A[larger], A[i]
             larger -= 1
 
-
     return A

@@ -4,19 +4,20 @@ from arrays import *
 
 class TestDutchFlagPartition(unittest.TestCase):
     def setUp(self):
-        self.a = list(range(0,10))
-        random.shuffle(self.a)
-        # generate a random number to be the pivot, then find it in the list
-        self.i = self.a.index(random.randint(0,9))
+        a = list(range(0,10))
+        random.shuffle(a)
+        self.pivot = random.randint(0,9)
+        pivot_index = a.index(self.pivot)
+        self.paritioned = dutch_flag_partition(pivot_index, a)
 
     def test_less_than_pivot(self):
-        left = dutch_flag_partition(self.i, self.a)[:self.i]
-        less_than = map(lambda x: x < self.a[self.i], left)
+        left = self.paritioned[:self.paritioned.index(self.pivot)]
+        less_than = map(lambda x: x < self.pivot, left)
         self.assertTrue(all(less_than))
 
     def test_greater_than_pivot(self):
-        right = dutch_flag_partition(self.i, self.a)[self.i + 1:]
-        greater_than = map(lambda x: x >= self.a[self.i], right)
+        right = self.paritioned[self.paritioned.index(self.pivot) + 1:]
+        greater_than = map(lambda x: x > self.pivot, right)
         self.assertTrue(all(greater_than))
 
 if __name__ == '__main__':

@@ -11,8 +11,5 @@ def even_odd(A):
 
     return A
 
-def main():
-    print 'even_odd([1, 2, 3, 4, 5]) == [4, 2, 3, 5, 1]:', even_odd([1, 2, 3, 4, 5]) == [4, 2, 3, 5, 1]
-
 if __name__ == '__main__':
-    main()
+    print 'even_odd([1, 2, 3, 4, 5]) == [4, 2, 3, 5, 1]:', even_odd([1, 2, 3, 4, 5]) == [4, 2, 3, 5, 1]

@@ -26,15 +26,15 @@
 
 ### Chapter 8: Stacks and Queues
 **8.1**: Implement a Stack with max API
-**8.2**:
-**8.7**:
-**8.8**:
+**8.2**: Evaluate RPN expressions
+**8.7**: Compute binary tree nodes in order of inc. depth
+**8.8**: Implement a circular queue
 
-### Chapter 9:
-**9.1**:
-**9.2**:
-**9.4**:
-**9.12**:
+### Chapter 9: Binary Trees
+**9.1**: Test if a binary tree is height balanced
+**9.2**: Test if a binary tree is symmetric
+**9.4**: Compute the LCA when nodes have parent pointers
+**9.12**: Reconstruct a binary tree from traversal data
 
 ### Chapter 10:
 **10.1**:

@@ -6,7 +6,8 @@ class TestDutchFlagPartition(unittest.TestCase):
     def setUp(self):
         self.a = list(range(0,10))
         random.shuffle(self.a)
-        self.i = random.randint(0,9)
+        # generate a random number to be the pivot, then find it in the list
+        self.i = self.a.index(random.randint(0,9))
 
     def test_less_than_pivot(self):
         left = dutch_flag_partition(self.a, self.i)[:self.i]

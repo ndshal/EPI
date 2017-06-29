@@ -10,12 +10,12 @@ class TestDutchFlagPartition(unittest.TestCase):
         self.i = self.a.index(random.randint(0,9))
 
     def test_less_than_pivot(self):
-        left = dutch_flag_partition(self.a, self.i)[:self.i]
+        left = dutch_flag_partition(self.i, self.a)[:self.i]
         less_than = map(lambda x: x < self.a[self.i], left)
         self.assertTrue(all(less_than))
 
     def test_greater_than_pivot(self):
-        right = dutch_flag_partition(self.a, self.i)[self.i + 1:]
+        right = dutch_flag_partition(self.i, self.a)[self.i + 1:]
         greater_than = map(lambda x: x >= self.a[self.i], right)
         self.assertTrue(all(greater_than))
 

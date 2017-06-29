@@ -10,8 +10,8 @@ def even_odd(A):
 
     return A
 
-# call A[i] the pivot, partition the array so that
-# A[j] < A[i] and A[k] >= A[i] for j < i and k > i respectively
+# partition array so that everything less than pivot_index is
+# smaller than the pivot
 def dutch_flag_partition(pivot_index, A):
     pivot = A[pivot_index]
     # first pass - group elements smaller than pivot
@@ -29,5 +29,21 @@ def dutch_flag_partition(pivot_index, A):
         elif A[i] > pivot:
             A[i], A[larger] = A[larger], A[i]
             larger -= 1
+
+    return A
+
+# given an array representing digits of an int, add one to the int
+def plus_one(A):
+    A[-1] += 1
+    for i in reversed(range(1, len(A))):
+        if A[i] < 10:
+            break
+        elif A[i] == 10:
+            A[i] = 0
+            A[i - 1] += 1
+
+    if A[0] == 10:
+        A[0] = 0
+        A.insert(0, 1)
 
     return A

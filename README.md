@@ -3,8 +3,8 @@
 ## List of Problems by Chapter
 
 ### Chapter 5: Arrays
-- [ ] **5.1**: The Dutch National Flag Problem
-- [ ] **5.2**: Increment an arbitrary-precision integer
+- [x] **5.1**: The Dutch National Flag Problem
+- [x] **5.2**: Increment an arbitrary-precision integer
 - [ ] **5.6**: Buy and sell a stock once
 - [ ] **5.12**: Sample offline data
 - [ ] **5.17**: The sudoku checker problem

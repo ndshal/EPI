@@ -48,51 +48,51 @@
 **11.8**: Find the *k* th largest element
 **11.9**: Find the missing IP address
 
-### Chapter 12:
-**12.1**:
-**12.2**:
-**12.3**:
-**12.4**:
+### Chapter 12: Hash Tables
+**12.1**: Test for palindromic permutations
+**12.2**: Is an anonymous letter constructible?
+**12.3**: Implement an ISBN Cache
+**12.4**: Compute the LCA, optimizing for close ancestors
 
-### Chapter 13:
-**13.1**:
-**13.2**:
-**13.5**:
+### Chapter 13: Sorting
+**13.1**: Compute the intersection of two sorted arrays
+**13.2**: Merge two sorted arrays
+**13.5**: Render a calendar
 
-### Chapter 14:
-**14.1**:
-**14.2**:
-**14.3**:
-**14.4**:
-**14.8**:
+### Chapter 14: Binary Search Trees
+**14.1**: Test if a binary tree satisfies the BST property
+**14.2**: Find the first key greater than a given value in a BST
+**14.3**: Find the *k* largest elements in a BST
+**14.4**: Compute the LCA in a BST
+**14.8**: The most visited pages problem
 
-### Chapter 15:
-**15.1**:
-**15.2**:
-**15.3**:
+### Chapter 15: Recursion
+**15.1**: The Towers of Hanoi problem
+**15.2**: Generate all non-attacking placements of *n*-queens
+**15.3**: Generate permutations
 
-### Chapter 16:
-**16.1**:
-**16.2**:
-**16.3**:
-**16.6**:
+### Chapter 16: Dynamic Programming
+**16.1**: Count the number of score combinations
+**16.2**: Compute the Levenshtein distance
+**16.3**: Compute the number of ways to traverse a 2D array
+**16.6**: The knapsack problem
 
-### Chapter 17:
-**17.4**:
-**17.5**:
-**17.6**:
+### Chapter 17: Greedy Algorithms and Invariants
+**17.4**: The 3-sum problem
+**17.5**: Find the majority element
+**17.6**: The gasup problem
 
-### Chapter 18:
-**18.1**:
-**18.2**:
-**18.7**:
+### Chapter 18: Graphs
+**18.1**: Search a maze
+**18.2**: Paint a Boolean matrix
+**18.7**: Transform one string to another
 
-### Chapter 19:
-**19.3**:
-**19.6**:
-**19.8**:
+### Chapter 19: Parallel Computing
+**19.3**: Implement synchronization for two interleaving threads
+**19.6**: The readers-writers problem
+**19.8**: Implement a Timer class
 
-### Chapter 20:
-**20.13**:
-**20.15**:
-**20.16**:
+### Chapter 20: Design Problems
+**20.13**: Implement Mileage Run
+**20.15**: Design an online advertising system
+**20.16**: Design a recommendation system

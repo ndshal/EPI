@@ -10,22 +10,22 @@
 **5.17**: The sudoku checker problem
 **5.18**: Compute the spiral ordering of a 2D array
 
-### Chapter 6:
-**6.1**: 
-**6.2**:
-**6.4**:
-**6.5**:
-**6.6**:
+### Chapter 6: Strings
+**6.1**: Interconvert strings and integers
+**6.2**: Base conversion
+**6.4**: Replace and remove
+**6.5**: Test palindromicity
+**6.6**: Reverse all words in a sentence
 
-### Chapter 7:
-**7.1**:
-**7.2**:
-**7.3**:
-**7.4**:
-**7.7**:
+### Chapter 7: Linked Lists
+**7.1**: Merge two sorted lists
+**7.2**: Reverse a single sublist
+**7.3**: Test for cyclicity
+**7.4**: Test for overlapping lists - lists are cycle free
+**7.7**: Remove the *k* th last element from a list
 
-### Chapter 8:
-**8.1**:
+### Chapter 8: Stacks and Queues
+**8.1**: Implement a Stack with max API
 **8.2**:
 **8.7**:
 **8.8**:

@@ -36,17 +36,17 @@
 **9.4**: Compute the LCA when nodes have parent pointers
 **9.12**: Reconstruct a binary tree from traversal data
 
-### Chapter 10:
-**10.1**:
-**10.3**:
-**10.4**:
+### Chapter 10: Heaps
+**10.1**: Merge sorted files
+**10.3**: Sort an almost-sorted array
+**10.4**: Compute the *k* closest stars
 
-### Chapter 11:
-**11.1**:
-**11.3**:
-**11.4**:
-**11.8**:
-**11.9**:
+### Chapter 11: Searching
+**11.1**: Search a sorted array for the first occurrence of *k*
+**11.3**: Search a cyclically sorted array
+**11.4**: Compute the integer square root
+**11.8**: Find the *k* th largest element
+**11.9**: Find the missing IP address
 
 ### Chapter 12:
 **12.1**:

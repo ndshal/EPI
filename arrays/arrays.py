@@ -12,5 +12,5 @@ def even_odd(A):
 
 # call A[i] the pivot, partition the array so that
 # A[j] < A[i] and A[k] >= A[i] for j < i and k > i respectively
-def dutch_flag_partition(A, i)
-    
+def dutch_flag_partition(A, i):
+    return A

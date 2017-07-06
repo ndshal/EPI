@@ -34,5 +34,14 @@ class TestBuyStockOnce(unittest.TestCase):
     def test_finds_max_difference(self):
         self.assertEqual(buy_sell_stock_once([310, 315, 275, 295, 260, 290, 230, 255, 250]), 30)
 
+class TestRandomSubset(unittest.TestCase):
+    def setUp(self):
+        self.arr = list(range(10))
+
+    def test_generates_random_subset(self):
+        self.assertNotEqual(random_subset(self.arr, 3)[:3], [0, 1, 2])
+
+    def test_does_not_generate_same_subset(self):
+        self.assertNotEqual(random_subset(self.arr, 3), random_subset(self.arr, 3))
 if __name__ == '__main__':
     unittest.main()

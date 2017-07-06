@@ -1,5 +1,5 @@
 import unittest
-from strings import *
+from epi.strings import *
 
 class TestIntStringConversion(unittest.TestCase):
     def test_int_to_string(self):
@@ -9,3 +9,6 @@ class TestIntStringConversion(unittest.TestCase):
     def test_string_to_int(self):
         self.assertEqual(string_to_int('123'), 123)
         self.assertEqual(string_to_int('-123'), -123)
+
+if __name__ == '__main__':
+    unittest.main()

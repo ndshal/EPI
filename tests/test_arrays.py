@@ -1,6 +1,6 @@
 import unittest
 import random
-from arrays import *
+from epi.arrays import *
 
 class TestDutchFlagPartition(unittest.TestCase):
     def setUp(self):

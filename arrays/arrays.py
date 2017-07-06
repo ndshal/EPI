@@ -1,3 +1,5 @@
+import random
+
 # given an array of integers, move all evens to the front. in place
 def even_odd(A):
     next_even, next_odd = 0, len(A) - 1
@@ -57,3 +59,12 @@ def buy_sell_stock_once(prices):
         min_price_so_far = min(min_price_so_far, price)
 
     return max_profit
+
+# given an array, and int k, generate a random subset of arr of length k,
+# return it in the the arr, s.t. arr[:k] is the subset.
+def random_subset(A, k):
+    for i in range(k):
+        r = random.randint(i, len(A) - 1)
+        A[i], A[r] = A[r], A[i]
+
+    return A

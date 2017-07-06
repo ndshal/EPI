@@ -42,6 +42,9 @@ class TestRandomSubset(unittest.TestCase):
         self.assertNotEqual(random_subset(self.arr, 3)[:3], [0, 1, 2])
 
     def test_does_not_generate_same_subset(self):
-        self.assertNotEqual(random_subset(self.arr, 3), random_subset(self.arr, 3))
+        arr1, arr2 = self.arr, self.arr
+        rand1 = random_subset(arr1, 3)[:3]
+        rand2 = random_subset(arr2, 3)[:3]
+        self.assertNotEqual(rand1, rand2)
 if __name__ == '__main__':
     unittest.main()

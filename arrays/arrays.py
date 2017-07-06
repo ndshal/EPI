@@ -1,7 +1,7 @@
 import random
 
-# given an array of integers, move all evens to the front. in place
 def even_odd(A):
+    """given an array of integers, move all evens to the front. in place"""
     next_even, next_odd = 0, len(A) - 1
     while next_even < next_odd:
         if A[next_even] % 2 == 0:
@@ -12,9 +12,9 @@ def even_odd(A):
 
     return A
 
-# partition array so that everything less than pivot_index is
-# smaller than the pivot
 def dutch_flag_partition(pivot_index, A):
+    """partition array so that everything less than pivot_index is
+    smaller than the pivot"""
     pivot = A[pivot_index]
     # first pass - group elements smaller than pivot
     smaller = 0
@@ -34,8 +34,8 @@ def dutch_flag_partition(pivot_index, A):
 
     return A
 
-# given an array representing digits of an int, add one to the int
 def plus_one(A):
+    """given an array representing digits of an int, add one to the int"""
     A[-1] += 1
     for i in reversed(range(1, len(A))):
         if A[i] < 10:
@@ -50,8 +50,8 @@ def plus_one(A):
 
     return A
 
-# given an array representing stock prices, find max profit
 def buy_sell_stock_once(prices):
+    """given an array representing stock prices, find max profit"""
     min_price_so_far, max_profit = float('inf'), 0.0
     for price in prices:
         profit_sell_today = price - min_price_so_far
@@ -60,9 +60,9 @@ def buy_sell_stock_once(prices):
 
     return max_profit
 
-# given an array, and int k, generate a random subset of arr of length k,
-# return it in the the arr, s.t. arr[:k] is the subset.
 def random_subset(A, k):
+    """given an array, and int k, generate a random subset of arr of length k,
+    return it in the the arr, s.t. arr[:k] is the subset."""
     for i in range(k):
         r = random.randint(i, len(A) - 1)
         A[i], A[r] = A[r], A[i]

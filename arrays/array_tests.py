@@ -46,5 +46,12 @@ class TestRandomSubset(unittest.TestCase):
         rand1 = random_subset(arr1, 3)[:3]
         rand2 = random_subset(arr2, 3)[:3]
         self.assertNotEqual(rand1, rand2)
+
+class TestSpiralOrder(unittest.TestCase):
+    def test_spiral_order_of_a_three_by_three(self):
+        self.assertEqual(
+            spiral_order([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+            [1, 2, 3, 6, 9, 8, 7, 4, 5])
+
 if __name__ == '__main__':
     unittest.main()

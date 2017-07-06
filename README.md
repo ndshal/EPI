@@ -7,7 +7,7 @@
 - [x] **5.2**: Increment an arbitrary-precision integer
 - [x] **5.6**: Buy and sell a stock once
 - [x] **5.12**: Sample offline data
-- [ ] **5.17**: The sudoku checker problem
+- [x] **5.17**: The sudoku checker problem
 - [ ] **5.18**: Compute the spiral ordering of a 2D array
 
 ### Chapter 6: Strings

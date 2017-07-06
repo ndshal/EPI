@@ -90,3 +90,6 @@ def is_valid_sudoku(partial_assignment):
         for a in range(region_size * I, region_size * (I + 1))
         for b in range(region_size * J, region_size * (J + 1))
     ]) for I in range(region_size) for J in range(region_size))
+
+def spiral_order(A):
+    return

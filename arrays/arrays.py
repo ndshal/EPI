@@ -91,5 +91,20 @@ def is_valid_sudoku(partial_assignment):
         for b in range(region_size * J, region_size * (J + 1))
     ]) for I in range(region_size) for J in range(region_size))
 
-def spiral_order(A):
-    return
+def spiral_order(matrix):
+    SHIFT = ((0, 1), (1, 0), (0, -1), (-1, 0))
+    direction = x = y = 0
+    spiral_ordering = []
+
+    n = len(matrix)
+    for _ in range(n**2):
+        spiral_ordering.append(matrix[x][y])
+        matrix[x][y] = 0
+        next_x, next_y = x + SHIFT[direction][0], y + SHIFT[direction][1]
+        if (next_x not in range(n) or next_y not in range(n) or
+                matrix[next_x][next_y] == 0):
+            direction = (direction + 1) & 3
+            next_x, next_y = x + SHIFT[direction][0], y + SHIFT[direction][1]
+        x, y = next_x, next_y
+
+    return spiral_ordering

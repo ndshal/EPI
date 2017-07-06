@@ -47,3 +47,6 @@ def plus_one(A):
         A.insert(0, 1)
 
     return A
+
+def buy_sell_stock_once(prices):
+    return

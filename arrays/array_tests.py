@@ -22,13 +22,17 @@ class TestDutchFlagPartition(unittest.TestCase):
 
 class TestPlusOne(unittest.TestCase):
     def test_increment(self):
-        self.assertEqual(plus_one([1,2,8]), [1,2,9])
+        self.assertEqual(plus_one([1, 2, 8]), [1, 2, 9])
 
     def test_carry_the_one(self):
-        self.assertEqual(plus_one([1,2,9]), [1,3,0])
+        self.assertEqual(plus_one([1, 2, 9]), [1, 3, 0])
 
     def test_add_digit(self):
-        self.assertEqual(plus_one([9,9]), [1,0,0])
+        self.assertEqual(plus_one([9, 9]), [1, 0, 0])
+
+class TestBuyStockOnce(unittest.TestCase):
+    def test_finds_max_difference(self):
+        self.assertEqual(buy_sell_stock_once([310, 315, 275, 295, 260, 290, 230, 255, 250]), 30)
 
 if __name__ == '__main__':
     unittest.main()

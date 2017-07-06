@@ -8,7 +8,7 @@
 - [x] **5.6**: Buy and sell a stock once
 - [x] **5.12**: Sample offline data
 - [x] **5.17**: The sudoku checker problem
-- [ ] **5.18**: Compute the spiral ordering of a 2D array
+- [x] **5.18**: Compute the spiral ordering of a 2D array
 
 ### Chapter 6: Strings
 - [ ] **6.1**: Interconvert strings and integers

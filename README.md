@@ -11,7 +11,7 @@
 - [x] **5.18**: Compute the spiral ordering of a 2D array
 
 ### Chapter 6: Strings
-- [ ] **6.1**: Interconvert strings and integers
+- [x] **6.1**: Interconvert strings and integers
 - [ ] **6.2**: Base conversion
 - [ ] **6.4**: Replace and remove
 - [ ] **6.5**: Test palindromicity

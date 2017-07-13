@@ -23,36 +23,29 @@ def string_to_int(s):
         s[s[0] == '-':], 0
         )*(-1 if s[0] == '-' else 1)
 
-def convert_decimal_to_base(s, b):
-    num = int(s)
-    power = int(math.log(num, b))
-    digits = []
-
-    while num > 0:
-        digit = num // b**power
-        digits.append(str(digit))
-        num -= digit * b**power
-        power -= 1
-
-    return ''.join(reversed(digits))
-
 def convert_base(s, b1, b2):
     """Convert string representation of an integer from b1 to b2"""
+
     def convert_decimal_to_base(s, b):
+        num_to_str = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
+
         num = int(s)
-        power = int(math.log(num, b))
+        power = 0
+        while num >= b**(power + 1):
+            power += 1
+
         digits = []
 
         while power >= 0:
             digit = num // b**power
-            digits.append(str(digit))
+            digits.append(num_to_str[digit])
             num -= digit * b**power
             power -= 1
 
-        return ''.join(reversed(digits))
+        return ''.join(digits)
 
     def convert_base_to_decimal(s, b):
-        dec = {
+        str_to_num = {
             '0': 0,
             '1': 1,
             '2': 2,
@@ -71,6 +64,6 @@ def convert_base(s, b1, b2):
             'F': 15,
         }
 
-        return str(reduce(lambda acc, el: acc + el, (dec[s[~i]] * b**i for i in range(len(s)))))
+        return str(reduce(lambda acc, el: acc + el, (str_to_num[s[~i]] * b**i for i in range(len(s)))))
 
     return convert_decimal_to_base(convert_base_to_decimal(s, b1), b2)

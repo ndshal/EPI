@@ -37,5 +37,9 @@ class TestIsPalindromicity(unittest.TestCase):
         self.assertTrue(is_palindrome('Able was I, ere I saw Elba!'))
         self.assertFalse(is_palindrome('Ray a Ray'))
 
+class TestReverseWords(unittest.TestCase):
+    def test_reverse_words(self):
+        self.assertEqual(reverse_words('ram is costly'), 'costly is ram')
+
 if __name__ == '__main__':
     unittest.main()

@@ -42,9 +42,6 @@ def replace_and_remove(size, s):
     # if we insert and delete using built-in methods, thats O(n^2) time
     # if we build an entirely new array, thats O(n) space.
 
-    # insight: if there are no a's, iterate through and move over all chars
-    # if there are no b's, ...
-
     write_idx, a_count = 0, 0
     for i in range(size):
         if s[i] != 'b':
@@ -81,3 +78,33 @@ def is_palindrome(s):
         i, j = i + 1, j - 1
 
     return True
+
+def reverse_words(s):
+    """Reverse the order of words in a string"""
+    # b/c strings are immutable, there is no way to do this without
+    # O(n) space. In that case:
+    return ' '.join(reversed(s.split(' ')))
+    # can do this a little more carefully if the string contains punct.
+
+def reverse_words_byte_array(s):
+    """Reverse the order of words in a string
+    assume the string is encoded as a byte array"""
+    s.reverse()
+
+    def reverse_range(s, start, end):
+        while start < end:
+            s[start], s[end] = s[end], s[start]
+            start, end = start + 1, end - 1
+
+    start = 0
+    while True:
+        end = s.find(' ', start)
+        if end < 0:
+            break
+        # reverse each word in string
+        reverse_range(s, start, end - 1)
+        start = end + 1
+    # reverse last word
+    reverse_range(s, start, len(s) - 1)
+
+    return s

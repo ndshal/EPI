@@ -1,5 +1,5 @@
 import string
-from functools import reduce
+import functools
 import math
 
 def int_to_string(x):
@@ -18,52 +18,20 @@ def int_to_string(x):
 
 def string_to_int(s):
     """Convert string to int"""
-    return reduce(
+    return functools.reduce(
         lambda running_sum, c: running_sum*10 + string.digits.index(c),
         s[s[0] == '-':], 0
         )*(-1 if s[0] == '-' else 1)
 
-def convert_base(s, b1, b2):
+def convert_base(num_as_string, b1, b2):
     """Convert string representation of an integer from b1 to b2"""
+    def construct_from_base(num_as_int, base):
+        return ('' if num_as_int == 0 else
+                construct_from_base(num_as_int // base, base) +
+                string.hexdigits[num_as_int % base].upper())
 
-    def convert_decimal_to_base(s, b):
-        num_to_str = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
-
-        num = int(s)
-        power = 0
-        while num >= b**(power + 1):
-            power += 1
-
-        digits = []
-
-        while power >= 0:
-            digit = num // b**power
-            digits.append(num_to_str[digit])
-            num -= digit * b**power
-            power -= 1
-
-        return ''.join(digits)
-
-    def convert_base_to_decimal(s, b):
-        str_to_num = {
-            '0': 0,
-            '1': 1,
-            '2': 2,
-            '3': 3,
-            '4': 4,
-            '5': 5,
-            '6': 6,
-            '7': 7,
-            '8': 8,
-            '9': 9,
-            'A': 10,
-            'B': 11,
-            'C': 12,
-            'D': 13,
-            'E': 14,
-            'F': 15,
-        }
-
-        return str(reduce(lambda acc, el: acc + el, (str_to_num[s[~i]] * b**i for i in range(len(s)))))
-
-    return convert_decimal_to_base(convert_base_to_decimal(s, b1), b2)
+    is_negative = num_as_string[0] == '-'
+    num_as_int = functools.reduce(
+        lambda x, c: x * b1 + string.hexdigits.index(c.lower()),
+        num_as_string[is_negative:], 0)
+    return ('-' if is_negative else '') + ('0' if num_as_int == 0 else construct_from_base(num_as_int, b2))

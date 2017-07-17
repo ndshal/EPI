@@ -13,7 +13,7 @@
 ### Chapter 6: Strings
 - [x] **6.1**: Interconvert strings and integers
 - [x] **6.2**: Base conversion
-- [ ] **6.4**: Replace and remove
+- [x] **6.4**: Replace and remove
 - [ ] **6.5**: Test palindromicity
 - [ ] **6.6**: Reverse all words in a sentence
 

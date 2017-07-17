@@ -29,5 +29,13 @@ class TestReplaceRemove(unittest.TestCase):
         output_array = ['d','d','c','d','c','d','d']
         self.assertEqual(replace_and_remove(7, input_array), output_array)
 
+class TestIsPalindromicity(unittest.TestCase):
+    def test_finds_palindrome(self):
+        self.assertTrue(is_palindrome('lionoil'))
+
+    def test_ignores_nonalpha_chars(self):
+        self.assertTrue(is_palindrome('Able was I, ere I saw Elba!'))
+        self.assertFalse(is_palindrome('Ray a Ray'))
+
 if __name__ == '__main__':
     unittest.main()

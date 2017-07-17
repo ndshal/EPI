@@ -66,3 +66,6 @@ def replace_and_remove(size, s):
         cur_idx -= 1
 
     return s
+
+def is_palindrome(s):
+    return False

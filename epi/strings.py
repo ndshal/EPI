@@ -39,4 +39,30 @@ def convert_base(num_as_string, b1, b2):
 def replace_and_remove(size, s):
     """Given an array of chars, delete every 'b' and replace every 'a'
     with two 'd's"""
+    # if we insert and delete using built-in methods, thats O(n^2) time
+    # if we build an entirely new array, thats O(n) space.
+
+    # insight: if there are no a's, iterate through and move over all chars
+    # if there are no b's, ...
+
+    write_idx, a_count = 0, 0
+    for i in range(size):
+        if s[i] != 'b':
+            s[write_idx] = s[i]
+            write_idx += 1
+        if s[i] == 'a':
+            a_count += 1
+
+    cur_idx = write_idx - 1
+    write_idx += a_count - 1
+    final_size = write_idx + 1
+    while cur_idx >= 0:
+        if s[cur_idx] == 'a':
+            s[write_idx - 1:write_idx + 1] = 'dd'
+            write_idx -= 2
+        else:
+            s[write_idx] = s[cur_idx]
+            write_idx -= 1
+        cur_idx -= 1
+
     return s

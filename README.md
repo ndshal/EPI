@@ -15,7 +15,7 @@
 - [x] **6.2**: Base conversion
 - [x] **6.4**: Replace and remove
 - [x] **6.5**: Test palindromicity
-- [ ] **6.6**: Reverse all words in a sentence
+- [x] **6.6**: Reverse all words in a sentence
 
 ### Chapter 7: Linked Lists
 - [ ] **7.1**: Merge two sorted lists

@@ -23,5 +23,11 @@ class TestConvertBase(unittest.TestCase):
     def test_binary_to_decimal(self):
         self.assertEqual(convert_base('1110101', 2, 10), '117')
 
+class TestReplaceRemove(unittest.TestCase):
+    def test_replace_and_remove(self):
+        input_array = ['a','c','d','b','b','c','a']
+        output_array = ['d','d','c','d','c','d','d']
+        self.assertEqual(replace_and_remove(7, input_array), output_array)
+
 if __name__ == '__main__':
     unittest.main()

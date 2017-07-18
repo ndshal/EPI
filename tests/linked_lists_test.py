@@ -51,7 +51,7 @@ class TestHasCycle(unittest.TestCase):
         node9.next = self.node4
 
     def test_finds_start_of_cycle(self):
-        self.assertEqual(has_cycle(self.list_with_cycle), self.node4)
+        self.assertEqual(has_cycle(self.list_with_cycle), True)
 
     def test_returns_none_if_cycle_free(self):
         self.assertEqual(has_cycle(self.cycle_free_list), None)

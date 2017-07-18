@@ -36,5 +36,16 @@ def reverse_sublist(L, start, end):
 
     return head.next
 
-def has_cycle(head):
+def has_cycle(L):
+    slow = fast = L
+    while slow and fast:
+        slow = slow.next
+        if fast.next:
+            fast = fast.next.next
+        else:
+            return None
+
+        if slow == fast:
+            return True
+
     return None

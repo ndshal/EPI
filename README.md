@@ -18,8 +18,8 @@
 - [x] **6.6**: Reverse all words in a sentence
 
 ### Chapter 7: Linked Lists
-- [ ] **7.1**: Merge two sorted lists
-- [ ] **7.2**: Reverse a single sublist
+- [x] **7.1**: Merge two sorted lists
+- [x] **7.2**: Reverse a single sublist
 - [ ] **7.3**: Test for cyclicity
 - [ ] **7.4**: Test for overlapping lists - lists are cycle free
 - [ ] **7.7**: Remove the *k* th last element from a list

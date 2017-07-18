@@ -42,5 +42,19 @@ class TestReverseSublist(unittest.TestCase):
         reverse_sublist(self.odd_list, 4, 7)
         self.assertEqual(to_list(self.odd_list), [1, 3, 5, 7, 15, 13, 11, 9, 17, 19])
 
+class TestHasCycle(unittest.TestCase):
+    def setUp(self):
+        self.cycle_free_list = build_list(range(10))
+        self.list_with_cycle = build_list(range(10))
+        node9 = search_list(self.list_with_cycle, 9)
+        self.node4 = search_list(self.list_with_cycle, 4)
+        node9.next = self.node4
+
+    def test_finds_start_of_cycle(self):
+        self.assertEqual(has_cycle(self.list_with_cycle), self.node4)
+
+    def test_returns_none_if_cycle_free(self):
+        self.assertEqual(has_cycle(self.cycle_free_list), None)
+
 if __name__ == '__main__':
     unittest.main()

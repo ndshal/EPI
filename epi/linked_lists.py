@@ -27,6 +27,7 @@ def reverse_sublist(L, start, end):
     #     curr_node = next_node
     #
     # sublist_tail.next = next_node
+
     sublist_iter = sublist_head.next
     for _ in range(start, end):
         current = sublist_iter.next
@@ -34,3 +35,6 @@ def reverse_sublist(L, start, end):
             current.next, sublist_head.next, current)
 
     return head.next
+
+def has_cycle(head):
+    return None

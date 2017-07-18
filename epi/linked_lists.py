@@ -1,6 +1,7 @@
 from epi.linked_list_proto import *
 
 def merge_two_sorted_lists(L1, L2):
+    """Merge two sorted lists"""
     dummy_head = tail = ListNode()
 
     while L1 and L2:
@@ -16,6 +17,8 @@ def merge_two_sorted_lists(L1, L2):
     return dummy_head.next
 
 def reverse_sublist(L, start, end):
+    """Given a list and start and end indices, reverse the sublist between
+    start and end, inclusive"""
     head = sublist_head = ListNode(0, L)
     for _ in range(start):
         sublist_head = sublist_head.next
@@ -37,6 +40,7 @@ def reverse_sublist(L, start, end):
     return head.next
 
 def has_cycle(head):
+    """Determine if list has a cycle, return start of cycle"""
     def cycle_len(end):
         start, step = end, 0
         while True:
@@ -69,6 +73,7 @@ def has_cycle(head):
     return None
 
 def overlapping_no_cycle_lists(L1, L2):
+    """Determine if L1, L2 overlap, return first node where they do"""
     # get lengths, offset longer list by difference
     def get_length(L):
         length = 0

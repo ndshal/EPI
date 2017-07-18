@@ -69,4 +69,22 @@ def has_cycle(head):
     return None
 
 def overlapping_no_cycle_lists(L1, L2):
+    # get lengths, offset longer list by difference
+    def get_length(L):
+        length = 0
+        while L:
+            length += 1
+            L = L.next
+
+        return length
+
+    len_1, len_2 = get_length(L1), get_length(L2)
+    if len_1 > len_2:
+        L1, L2 = L2, L1 # make L2 the longer list
+
+    for _ in range(abs(len_2 - len_1)):
+        L2 = L2.next
+
+    while L1 and L2 and L1 is not L2:
+        L1, L2 = L1.next, L2.next
     return L1

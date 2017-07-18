@@ -36,7 +36,7 @@ class TestMergeTwoLists(unittest.TestCase):
 
 class TestReverseSublist(unittest.TestCase):
     def setUp(self):
-        self.odd_list = build_list(range(1,20,2))
+        self.odd_list = build_list(range(1, 20, 2))
 
     def test_reverse_sublist(self):
         reverse_sublist(self.odd_list, 4, 7)
@@ -55,6 +55,20 @@ class TestHasCycle(unittest.TestCase):
 
     def test_returns_none_if_cycle_free(self):
         self.assertEqual(has_cycle(self.cycle_free_list), None)
+
+class TestOverlappingNoCycleLists(unittest.TestCase):
+    def setUp(self):
+        self.L1 = build_list(range(10))
+        self.L2 = build_list(range(-9,0))
+        self.node_m3 = search_list(self.L2, -3)
+        self.node_4 = search_list(self.L1, 4)
+
+    def test_handles_disjoint_lists(self):
+        self.assertEqual(overlapping_no_cycle_lists(self.L1, self.L2), None)
+
+    def test_finds_first_overlap_node(self):
+        self.node_m3.next = self.node_4
+        self.assertEqual(overlapping_no_cycle_lists(self.L1, self.L2), self.node_4)
 
 if __name__ == '__main__':
     unittest.main()

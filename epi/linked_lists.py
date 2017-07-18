@@ -64,7 +64,9 @@ def has_cycle(head):
             while it is not cycle_len_it:
                 it = it.next
                 cycle_len_it = cycle_len_it.next
-
             return it
 
     return None
+
+def overlapping_no_cycle_lists(L1, L2):
+    return L1

@@ -88,7 +88,7 @@ def reverse_words(s):
 
 def reverse_words_byte_array(s):
     """Reverse the order of words in a string
-    assume the string is encoded as a byte array"""
+    assuming the string is encoded as a byte array"""
     s.reverse()
 
     def reverse_range(s, start, end):

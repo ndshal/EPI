@@ -20,7 +20,7 @@
 ### Chapter 7: Linked Lists
 - [x] **7.1**: Merge two sorted lists
 - [x] **7.2**: Reverse a single sublist
-- [ ] **7.3**: Test for cyclicity
+- [x] **7.3**: Test for cyclicity
 - [ ] **7.4**: Test for overlapping lists - lists are cycle free
 - [ ] **7.7**: Remove the *k* th last element from a list
 

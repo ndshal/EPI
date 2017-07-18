@@ -50,6 +50,12 @@ def has_cycle(head):
     while fast and fast.next and fast.next.next:
         slow, fast = slow.next, fast.next.next
         if slow is fast:
+            # fast goes twice as fast as slow, meaning that when they match,
+            # both iterators will be in the middle of the cycle (roughly)
+            # so, get two iterators, offset them by cycle length, and step
+            # forward equally until they match. This must be the start of the
+            # cycle.
+
             cycle_len_it = head
             for _ in range(cycle_len(slow)):
                 cycle_len_it = cycle_len_it.next

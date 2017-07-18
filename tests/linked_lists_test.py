@@ -39,7 +39,7 @@ class TestReverseSublist(unittest.TestCase):
         self.odd_list = build_list(range(1,20,2))
 
     def test_reverse_sublist(self):
-        reverse_sublist(self.odd_list, 4, 8)
+        reverse_sublist(self.odd_list, 4, 7)
         self.assertEqual(to_list(self.odd_list), [1, 3, 5, 7, 15, 13, 11, 9, 17, 19])
 
 if __name__ == '__main__':

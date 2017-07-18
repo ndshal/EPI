@@ -20,11 +20,17 @@ def reverse_sublist(L, start, end):
     for _ in range(start):
         sublist_head = sublist_head.next
 
-    curr_node = sublist_tail = sublist_head.next
+    # curr_node = sublist_tail = sublist_head.next
+    # for _ in range(start, end):
+    #     next_node = curr_node.next
+    #     insert_after(sublist_head, curr_node)
+    #     curr_node = next_node
+    #
+    # sublist_tail.next = next_node
+    sublist_iter = sublist_head.next
     for _ in range(start, end):
-        next_node = curr_node.next
-        insert_after(sublist_head, curr_node)
-        curr_node = next_node
+        current = sublist_iter.next
+        sublist_iter.next, current.next, sublist_head.next = (
+            current.next, sublist_head.next, current)
 
-    sublist_tail.next = next_node
     return head.next

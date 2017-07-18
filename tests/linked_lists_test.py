@@ -70,5 +70,10 @@ class TestOverlappingNoCycleLists(unittest.TestCase):
         self.node_m3.next = self.node_4
         self.assertEqual(overlapping_no_cycle_lists(self.L1, self.L2), self.node_4)
 
+class TestRemoveKthLastNode(unittest.TestCase):
+    def test_remove_kth_last_node(self):
+        L = build_list(range(10))
+        self.assertEqual(to_list(remove_kth_last(L, 3)), [0, 1, 2, 3, 4, 5, 6, 8, 9])
+
 if __name__ == '__main__':
     unittest.main()

@@ -3,6 +3,14 @@ class ListNode:
         self.data = data
         self.next = next_node
 
+def to_list(L):
+    res = []
+    while L:
+        res.append(L.data)
+        L = L.next
+
+    return res
+
 def search_list(L, key):
     while L and L.data != key:
         L = L.next
@@ -11,6 +19,7 @@ def search_list(L, key):
 def insert_after(node, next_node):
     next_node.next = node.next
     node.next = next_node
+
 
 def delete(node):
     node.data = node.next.data

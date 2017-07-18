@@ -90,4 +90,19 @@ def overlapping_no_cycle_lists(L1, L2):
     return L1
 
 def remove_kth_last(L, k):
-    return L
+    """Remove the kth to last node from L, without finding len(L)"""
+    head = ListNode(0, L)
+
+    # two iterators, offset them by k!
+    first = head.next
+    for _ in range(k):
+        first = first.next
+
+    second = head
+    while first:
+        first, second = first.next, second.next
+    # first is at the end,
+    # second is (k+1) from the end
+    second.next = second.next.next
+
+    return head.next

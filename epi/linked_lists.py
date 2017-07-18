@@ -3,6 +3,14 @@ class ListNode:
         self.data = data
         self.next = next_node
 
+def build_list(node_values):
+    head = tail = ListNode()
+    for val in node_values:
+        insert_after(tail, ListNode(val))
+        tail = tail.next
+
+    return head.next
+
 def to_list(L):
     res = []
     while L:

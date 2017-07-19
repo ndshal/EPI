@@ -26,7 +26,7 @@
 
 ### Chapter 8: Stacks and Queues
 - [x] **8.1**: Implement a Stack with max API
-- [ ] **8.2**: Evaluate RPN expressions
+- [x] **8.2**: Evaluate RPN expressions
 - [ ] **8.7**: Compute binary tree nodes in order of inc. depth
 - [ ] **8.8**: Implement a circular queue
 

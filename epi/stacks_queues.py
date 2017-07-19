@@ -1,3 +1,5 @@
+import collections
+
 def evaluate(RPN_expression):
     """Evaluate string encoding an expression in Reverse Polish Notation"""
     intermediate_results = []
@@ -22,4 +24,18 @@ def evaluate(RPN_expression):
 
 def binary_tree_depth_order(tree):
     """Return an array of arrays representing depth levels in a binary tree"""
-    return []
+    result, curr_depth_nodes = [], collections.deque([tree])
+    while curr_depth_nodes:
+        next_depth_nodes, this_level = collections.deque([]), []
+        while curr_depth_nodes:
+            curr = curr_depth_nodes.popleft()
+            if curr:
+                this_level.append(curr.data)
+                next_depth_nodes += [curr.left, curr.right]
+
+        if this_level:
+            result.append(this_level)
+
+        curr_depth_nodes = next_depth_nodes
+
+    return result

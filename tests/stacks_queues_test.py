@@ -20,8 +20,8 @@ class TestBinaryTreeDepthOrder(unittest.TestCase):
         J = BinaryTreeNode(2)
         K = BinaryTreeNode(1)
         L = BinaryTreeNode(401)
-        M = BinaryTreeNode(257)
-        N = BinaryTreeNode(641)
+        M = BinaryTreeNode(641)
+        N = BinaryTreeNode(257)
         O = BinaryTreeNode(271)
         P = BinaryTreeNode(28)
 

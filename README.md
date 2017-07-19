@@ -22,7 +22,7 @@
 - [x] **7.2**: Reverse a single sublist
 - [x] **7.3**: Test for cyclicity
 - [x] **7.4**: Test for overlapping lists - lists are cycle free
-- [ ] **7.7**: Remove the *k* th last element from a list
+- [x] **7.7**: Remove the *k* th last element from a list
 
 ### Chapter 8: Stacks and Queues
 - [ ] **8.1**: Implement a Stack with max API

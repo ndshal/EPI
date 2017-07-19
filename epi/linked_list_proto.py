@@ -28,7 +28,6 @@ def insert_after(node, next_node):
     next_node.next = node.next
     node.next = next_node
 
-
 def delete(node):
     node.data = node.next.data
     node.next = node.next.next

@@ -19,3 +19,7 @@ def evaluate(RPN_expression):
             intermediate_results.append(int(token))
 
     return intermediate_results[-1]
+
+def binary_tree_depth_order(tree):
+    """Return an array of arrays representing depth levels in a binary tree"""
+    return []

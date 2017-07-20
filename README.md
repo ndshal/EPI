@@ -31,8 +31,8 @@
 - [x] **8.8**: Implement a circular queue
 
 ### Chapter 9: Binary Trees
-- [ ] **9.1**: Test if a binary tree is height balanced
-- [ ] **9.2**: Test if a binary tree is symmetric
+- [x] **9.1**: Test if a binary tree is height balanced
+- [x] **9.2**: Test if a binary tree is symmetric
 - [ ] **9.4**: Compute the LCA when nodes have parent pointers
 - [ ] **9.12**: Reconstruct a binary tree from traversal data
 

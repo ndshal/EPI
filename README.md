@@ -33,7 +33,7 @@
 ### Chapter 9: Binary Trees
 - [x] **9.1**: Test if a binary tree is height balanced
 - [x] **9.2**: Test if a binary tree is symmetric
-- [ ] **9.4**: Compute the LCA when nodes have parent pointers
+- [x] **9.4**: Compute the LCA when nodes have parent pointers
 - [ ] **9.12**: Reconstruct a binary tree from traversal data
 
 ### Chapter 10: Heaps

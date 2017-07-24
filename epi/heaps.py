@@ -1,6 +1,7 @@
 import heapq
 
 def merge_sorted_arrays(sorted_arrays):
+    """Merge sorted arrays in less than nlog(n) time"""
     min_heap = []
 
     sorted_arrays_iters = [iter(x) for x in sorted_arrays]

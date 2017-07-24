@@ -37,7 +37,7 @@
 - [x] **9.12**: Reconstruct a binary tree from traversal data
 
 ### Chapter 10: Heaps
-- [ ] **10.1**: Merge sorted files
+- [x] **10.1**: Merge sorted files
 - [ ] **10.3**: Sort an almost-sorted array
 - [ ] **10.4**: Compute the *k* closest stars
 

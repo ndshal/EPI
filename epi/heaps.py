@@ -1,4 +1,5 @@
 import heapq
+import itertools
 
 def merge_sorted_arrays(sorted_arrays):
     """Merge sorted arrays in less than nlog(n) time"""
@@ -22,4 +23,18 @@ def merge_sorted_arrays(sorted_arrays):
     return result
 
 def sort_k_sorted_array(sequence, k):
-    return sequence
+    min_heap = []
+    result = []
+
+    for x in itertools.islice(sequence, k):
+        heapq.heappush(min_heap, x)
+
+    for x in sequence[k:]:
+        smallest = heapq.heappushpop(min_heap, x)
+        result.append(smallest)
+
+    while min_heap:
+        smallest = heapq.heappop(min_heap)
+        result.append(smallest)
+
+    return result

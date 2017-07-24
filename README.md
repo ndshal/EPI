@@ -38,8 +38,8 @@
 
 ### Chapter 10: Heaps
 - [x] **10.1**: Merge sorted files
-- [ ] **10.3**: Sort an almost-sorted array
-- [ ] **10.4**: Compute the *k* closest stars
+- [x] **10.3**: Sort an almost-sorted array
+- [x] **10.4**: Compute the *k* closest stars
 
 ### Chapter 11: Searching
 - [ ] **11.1**: Search a sorted array for the first occurrence of *k*

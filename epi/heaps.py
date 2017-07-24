@@ -20,3 +20,6 @@ def merge_sorted_arrays(sorted_arrays):
             heapq.heappush(min_heap, (next_element, smallest_entry_i))
 
     return result
+
+def sort_k_sorted_array(sequence, k):
+    return sequence

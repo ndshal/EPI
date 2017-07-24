@@ -1,4 +1,5 @@
 import collections
+from binary_tree_proto import BinaryTreeNode
 
 def is_balanced_binary_tree(tree):
     """Determine if a binary tree is balanced"""
@@ -63,3 +64,26 @@ def lca(node_0, node_1):
         node_0, node_1 = node_0.parent, node_1.parent
 
     return node_0
+
+def binary_tree_from_preorder_inorder(preorder, inorder):
+    """Build a binary tree given preorder and inorder traversal data"""
+    node_to_inorder_idx = {data: i for i, data in enumerate(inorder)}
+
+    def binary_tree_from_preorder_inorder_helper(preorder_start, preorder_end, inorder_start, inorder_end):
+        if preorder_end <= preorder_start or inorder_end <= inorder_start:
+            return None
+
+        root_inorder_idx = node_to_inorder_idx[preorder[preorder_start]]
+        left_subtree_size = root_inorder_idx - inorder_start
+        return BinaryTreeNode(
+            preorder[preorder_start],
+            # Recursively build left subtree
+            binary_tree_from_preorder_inorder_helper(
+                preorder_start + 1, preorder_start + 1 + left_subtree_size,
+                inorder_start, root_inorder_idx),
+            # Recursively build right substree
+            binary_tree_from_preorder_inorder_helper(
+                preorder_start + 1 + left_subtree_size, preorder_end,
+                root_inorder_idx + 1, inorder_end))
+
+    return binary_tree_from_preorder_inorder_helper(0, len(preorder), 0, len(inorder))

@@ -1,3 +1,4 @@
+import csv
 import heapq
 import itertools
 
@@ -23,6 +24,7 @@ def merge_sorted_arrays(sorted_arrays):
     return result
 
 def sort_k_sorted_array(sequence, k):
+    """Sort an array where no element is more than k away from its correct pos"""
     min_heap = []
     result = []
 
@@ -38,3 +40,25 @@ def sort_k_sorted_array(sequence, k):
         result.append(smallest)
 
     return result
+
+class Star:
+    def __init__(self, x, y, z):
+        self.x, self.y, self.z = x, y, z
+
+    @property
+    def distance(self):
+        return self.x**2 + self.y**2 + self.z**2
+
+    def __lt__(self, other_star):
+        return self.distance < other_star.distance
+
+def find_k_closest_stars(k, stars):
+    max_heap = []
+    reader = csv.reader(stars)
+    for line in reader:
+        star = Star(*map(float, line))
+        heapq.heappush(max_heap, (-star.distance, star))
+        if len(max_heap) == k + 1:
+            heapq.heappop(max_heap)
+
+    return [s[1] for s in heapq.nlargest(k, max_heap)]
